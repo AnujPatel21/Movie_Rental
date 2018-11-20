@@ -1,0 +1,19 @@
+<html>
+<head>
+{% load static %}
+<link rel = "stylesheet" type = "text/css" href = '{% static "movierental/style.css" %}'>
+<body>
+  <h1>Movie Rentals</h1>
+  <ul id = "nav">
+    <li><a href='{% url "available" %}'> Available </a></li>
+    <li><a href='{% url "rental" %}'> Rented </a></li>
+    <li><a href='{% url "movies" %}'> Movies </a></li>
+    <li><a href='{% url "customers" %}'> Customers </a></li>
+    <li><a href='{% url "addmovie" %}'> Add Movies </a></li>
+    <li><a href='{% url "addcustomer" %}'> Add Customers </a></li>
+  </ul>
+  {% block nav %}
+
+  {% endblock %}
+</body>
+</html>

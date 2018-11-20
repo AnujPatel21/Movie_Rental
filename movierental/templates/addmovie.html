@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<form method="post">
+    {% csrf_token %}
+    <table style="border: 1px solid black">
+    {{ movieform }}
+    </table>
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

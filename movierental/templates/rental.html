@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block nav %}
+{% load static %}
+<link rel = "stylesheet" type = "text/css" href = '{% static "movierental/rental.css" %}'>
+
+<table>
+  <tr>
+  <th>Name</th>
+  <th>Released</th>
+  <th>Duration</th>
+  <th>Price</th>
+  <th>Genre</th>
+  </tr>
+  {% for rentals in movies %}
+  <tr>
+  <td>{{ rentals.name}}</td>
+  <td>{{ rentals.released }}</td>
+  <td>{{ rentals.duration }}</td>
+  <td>{{ rentals.price }}</td>
+  <td>{{ rentals.genre }}</td>
+  </tr>
+
+  {% endfor %}
+
+
+
+
+{% endblock %}

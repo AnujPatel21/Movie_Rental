@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block nav %}
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<table>
+  <tr>
+  <th>Name</th>
+  <th>Released</th>
+  <th>Duration</th>
+  <th>Price</th>
+  <th>Genre</th>
+  </tr>
+  {% for availables in movies %}
+  <tr>
+  <td>{{ availables.name}}</td>
+  <td>{{ availables.released }}</td>
+  <td>{{ availables.duration }}</td>
+  <td>{{ availables.price }}</td>
+  <td>{{ availables.genre }}</td>
+  </tr>
+
+  {% endfor %}
+
+
+
+
+{% endblock %}
